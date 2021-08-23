@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package echo;
+
+// define the echo service
+service echo{
+    rpc GetEcho (GetEchoReq) returns (GetEchoReply){};
+}
+
+//  define the request msg
+message GetEchoReq{
+    string name = 1;
+}
+
+// define the response msg
+message GetEchoReply{
+    string result=1;
+}
